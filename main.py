@@ -1,16 +1,18 @@
-# This is a sample Python script.
+import streamlit as st
+from PIL import Image
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+st.header('Augusto Nonato Moraes')
+
+with st.chat_message("user"):
+    st.write("Olá 👋, sou Graduando em Sistemas de informação pela Universidade Federal do Pará Campus Cametá e Utilizarei essa Biblioteca para desenvolver meu Trabalho"
+             "de Conclusão de Curso (TCC)")
+st.divider()
+
+with st.container():
+    image = Image.open('images/Augusto.jpeg')
+    st.image(image,caption='Augusto Nonato Moraes', clamp=True)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+result = st.button("Primeiro App")
+if result:
+    st.write('Obrigado por acessar a página!')
